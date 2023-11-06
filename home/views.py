@@ -34,7 +34,14 @@ def about(request):
 
 def search(request):
     query=request.GET['query']
-    allPosts= Post.objects.filter(title__icontains=query)
-    
-    params={'allPosts': allPosts}
-    return render(request, 'home/search.html', params)
+    if len(query) >78:
+        allPosts = Post.objects.none()
+    else:
+        allPoststitle= Post.objects.filter(title__icontains=query)
+        allPostsauthor= Post.objects.filter(author__icontains=query)
+        allPostscontent= Post.objects.filter(content__icontains=query)
+        allPosts = allPoststitle.union(allPostscontent , allPostsauthor)
+    if allPosts.count() == 0:
+        messages.warning(request , "no search result found")
+    params={'allPosts': allPosts , 'query' :query}
+    return render(request, 'home/search.html', params )
