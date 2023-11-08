@@ -13,7 +13,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">iCoder</a>
+        <a class="navbar-brand" href="/">QuickLoom</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -81,27 +81,27 @@ SignUp
         <form action= "/signup" method='post'>
   <div class="form-group">
     <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" name="username" placeholder="Choose a unique username">
+    <input type="text" class="form-control" id="username" name="username" placeholder="Choose a unique username" Required>
   </div>
   <div class="form-group">
     <label for="fname">First Name</label>
-    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name">
+    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name" Required>
   </div>
   <div class="form-group">
     <label for="lname">Last Name</label>
-    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name">
+    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name" Required>
   </div>
   <div class="form-group">
     <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" Required>
   </div>
   <div class="form-group">
     <label for="pass1">Choose a password</label>
-    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password">
+    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password" Required>
   </div>
   <div class="form-group">
     <label for="pass2">Confirm Password</label>
-    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again">
+    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again" Required>
   </div>
  
 
@@ -133,14 +133,15 @@ SignUp
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action = "/login" method = "POST" >
+          {% csrf_token %}
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Choose a unique username">
   </div>
   <div class="form-group">
     <label for="pass">Enter your password </label>
-    <input type="password" class="form-control" id="pass" name="pass" placeholder="Enter your password ">
+    <input type="password" class="form-control" id="loginpassword" name=" loginpassword" placeholder="Enter your password ">
   </div>
  
         <button type="submit" class="btn btn-primary">Submit</button>
