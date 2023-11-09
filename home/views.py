@@ -88,7 +88,7 @@ def handelLogin(request):
     return HttpResponse("404- Not found")
    
 
-    return HttpResponse("login")
+   
 
 def handelLogout(request):
     logout(request)
