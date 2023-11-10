@@ -18,14 +18,32 @@
         <p>{{post.content}}</p>
         <hr>
         <div class="container">
-          <h1></h1>Comments:</h1>
-          <div class="md-3-success">
-            hello 
-
+          <h2> Comments</h2>
+          <form action="/blog/postComment" method="post">
+          {% csrf_token %}
+          <input type="text" name="comment" placeholder="Enter comment here">
+          <input type="hidden" name="postSno" value="{{post.sno}}" >
+          <input type="submit" value="Submit">
+         </form>
+          <div class="row my-3">
+          <div class="col-md-2 ">Image here</div>
+          <div class="col-md-10  ">Comment here</div>
           </div>
-        </div>
-
-
-      </div>
+          <div class="row my-3">
+          <div class="col-md-2 ">Image here</div>
+          <div class="col-md-10  ">Comment here</div>
+          </div>
+          <div class="row my-3">
+          <div class="col-md-2 ">Image here</div>
+          <div class="col-md-10  ">Comment here</div>
+          </div>
+          <div class="row my-3">
+          <div class="col-md-2 ">Image here</div>
+          <div class="col-md-10  ">Comment here</div>
+          </div>
+          <div class="row my-3">
+          <div class="col-md-2 ">Image here</div>
+          <div class="col-md-10  ">Comment here</div>
+          </div>
       </div>
  {% endblock %}
