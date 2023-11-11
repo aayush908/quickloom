@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
-    'blog.apps.BlogConfig'
-]
+    'blog.apps.BlogConfig',
+    'django.contrib.humanize',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -6,7 +6,10 @@ from django.contrib.auth  import authenticate,  login, logout
 from blog.models import Post
 
 def home(request): 
-    return render(request, "home/home.html")
+    allpost = Post.objects.all()
+    context = {'allpost' : allpost}
+    return render(request ,"home/home.html", context)
+    
 
 def contact(request):
     if request.method=="POST":
