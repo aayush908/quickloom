@@ -16,8 +16,8 @@
 <div class="container my-3">
     <h2>Coding Articles by QuickLoom</h2>
     {% for post in allpost  %}
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative" style="background-color: #f4e8d9;">
+        <div class="col p-4 d-flex flex-column position-static my-3">
             <strong class="d-inline-block mb-2 text-primary">Article By {{ post.author}}</strong>
             <h3 class="mb-0">{{post.title}}</h3>
             <div class="mb-1 text-muted">{{ post.datetime}}</div>

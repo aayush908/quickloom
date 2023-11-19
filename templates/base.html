@@ -14,6 +14,28 @@
     body{
       background-color: #4A4633;
     }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .social-icons {
+      margin-top: 10px;
+  }
+
+  .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      color: #fff;
+  }
+
+  .designer-name {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #fff;
+  }
     
     </style>
   </head>
@@ -144,46 +166,21 @@
 
       {% block body %}  {% endblock body %}
 </main>
-      <footer class="text-center "   id="contact " style="margin-top: 8vh; background: linear-gradient(-45deg, rgb(44, 6, 3), rgb(22, 34,42), rgb(44, 6, 65), rgb(0, 22, 6));  color: white;"   >
-        <!-- Grid container -->
-       
-        <div class="container p-4 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <h3>  QuickLoom</h3>
-              <!--Call -->
-              <a class="btn btn-outline-light btn-floating m-1" href="tel:8477092423" role="button"
-              ><i class="fa fa-phone"></i
-            ></a>
-            <!-- Linkedin -->
-            <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/gaurav-bhatt-b927321a6/" role="button"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-    
-             <!-- Github -->
-             <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/gaurav_04_01/" role="button"
-             ><i class="fab fa-instagram"></i
-           ></a>
-    
-          
-    
-            <!-- Email -->
-            <a class="btn btn-outline-light btn-floating m-1" href="mailto:aayushkapil100@gmail.com" role="button"
-              ><i class="fa fa-envelope"></i
-            ></a>
-      
-          </section>
-          <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center pb-3" >
-          © 2023 Copyright <br>
-          <a class="text-light" href="https://gaurav-bhatt-s-portfolio.vercel.app/">Design & Developed by Aayush Kapil</a>
-        </div>
-        <!-- Copyright -->
-      </footer>
+<footer>
+  <!-- Social Media Icons -->
+  <div class="social-icons">
+      <a href="#" target="_blank"><img src="static\img\fb.jpg" alt="Facebook" width="100" height="100"></a>
+      <a href="#" target="_blank"><img src="path/to/twitter-icon.png" alt="Twitter"></a>
+      <a href="#" target="_blank"><img src="path/to/instagram-icon.png" alt="Instagram"></a>
+      <!-- Add more social media icons as needed -->
+  </div>
+
+  <!-- Copyright Message -->
+  <p>&copy; 2023 QuickLoom Blog. All rights reserved.</p>
+
+  <!-- Designer Name -->
+  <p class="designer-name">Website designed by <a href="https://www.linkedin.com/in/aayush-kapil-759959252" target="_blank">AAYUSH KAPIL</a></p>
+</footer>
 
       {% block js %}
       {% endblock js %}

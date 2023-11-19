@@ -3,13 +3,13 @@
 {% block body %}
 {% load humanize %}
 {% load extras %}
-<div class="container my-3">
+<div class="container my-3" style="background-color: #f4e8d9;">
     <h2 class="blog-post-title">{{post.title}}</h2>
     <p class="blog-post-meta">{{post.timeStamp}} by <a href="/about">{{post.author}}</a></p>
     <p>{{post.content}}</p>
     <hr>
 </div>
-<div class="container">
+<div class="container" style="background-color: #d7d7e3;">
     <h2> Comments ({{comments.count}}) </h2>
     <div class="my-2">
         {% if user.is_authenticated %}
