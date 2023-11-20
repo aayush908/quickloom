@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block title %} contact {% endblock title %} 
+{% block style %} 
+.container my-3{
+  background-color : lightgreen;
+}
+{% endblock style %}
+
+{%block body %}
+<div class="container my-3">
+  <form action="writeblog" method="post">
+    {% csrf_token %}
+    <h2>WRITE YOUR BLOG HERE </h2>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author name </label>
+      <input
+        type="name"
+        name="author"
+        class="form-control"
+        id="author"
+        aria-describedby="authorname"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        name="title"
+        class="form-control"
+        id="title"
+        aria-describedby="emailHelp"
+      />
+      
+    </div>
+    <div class="mb-3">
+      <label for="slug" class="form-label">slug</label>
+      <input
+        type="text"
+        name="slug"
+        class="form-control"
+        id="slug"
+        aria-describedby="slug"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label"
+        >WRITE YOUR CONTENT  :
+      </label>
+      <textarea
+        class="form-control"
+        name="content"
+        id="content"
+        cols="30"
+        rows="5"
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock body %}

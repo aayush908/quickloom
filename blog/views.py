@@ -45,3 +45,17 @@ def postComment(request):
         
     return redirect(f"/blog/{post.slug}")
 
+def writeblog(request):
+    if request.method=="POST":
+        author=request.POST['author']
+        title=request.POST['title']
+        slug=request.POST['slug']
+        content =request.POST['content']
+        if len(author)<2 or len(title)<3 or len(slug)<3 or len(content)<4:
+            messages.error(request, "Please fill the form correctly")
+        else:
+            blog = Post(title=title, author=author, slug=slug, content=content)
+            blog.save()
+            messages.success(request, "Your  blog has been successfully sent")
+    return render(request, "blog/writeblog.html")
+
