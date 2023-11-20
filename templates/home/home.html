@@ -67,7 +67,7 @@
   <div class="container my-6">
     <h2>QuickLoom Specials</h2>
 
-    {% for post in allpost  %}
+    {% for post in allpost|slice:":2" %}
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative " style="background-color: #f4e8d9;">
         <div class="col p-4 d-flex flex-column position-static my-4">
             <strong class="d-inline-block mb-2 text-primary">Article By {{ post.author}}</strong>
