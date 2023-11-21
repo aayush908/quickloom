@@ -1,88 +1,161 @@
-{% extends 'base.html' %} {% block title %} BlogHome {% endblock title %} 
-
-
+{% extends 'base.html' %} {% block title %} BlogHome {% endblock title %}
 {%block homeactive %} active{% endblock homeactive %} {% block body %}
-<style>
- 
-</style>
-<div class = container  mt-5>
-<div id="carouselExampleDark" class="carousel carousel-dark slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<style></style>
+<div class="container" mt-5>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="10000" >
-        <img src="https://source.unsplash.com/random/1600x550/?hill,tech,coding " class="d-block w-100" alt="..." style="opacity: 0.9;">
-        <div class="carousel-caption d-none d-md-block" style="opacity: 0.6; background-color: black; border-radius: 12px;">
-       
+    <div
+      id="carouselExampleDark"
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src="https://source.unsplash.com/random/1600x550/?hill,tech,coding "
+            class="d-block w-100"
+            alt="..."
+            style="opacity: 0.9"
+          />
+          <div
+            class="carousel-caption d-none d-md-block"
+            style="opacity: 0.6; background-color: black; border-radius: 12px"
+          >
+            <h4 style="color: whitesmoke; font-family: cursive; opacity: 1">
+              QuickLoom will be a hub for bloggers, writers, and enthusiasts to
+              publish and share their articles, stories, and insights on a wide
+              range of topics.
+            </h4>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://source.unsplash.com/random/1600x550/?Travel"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div
+            class="carousel-caption d-none d-md-block"
+            style="opacity: 0.6; background-color: black; border-radius: 12px"
+          >
+            <h4 style="color: whitesmoke; font-family: cursive; opacity: 1">
+              Emphasize educational and informative content to empower readers
+              with valuable insights and skills.
+            </h4>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://source.unsplash.com/random/1600x550/?wellness"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div
+            class="carousel-caption d-none d-md-block"
+            style="opacity: 0.6; background-color: black; border-radius: 12px"
+          >
+            <h4 style="color: whitesmoke; font-family: cursive; opacity: 1">
+              Stay updated with our latest posts, interact with our community,
+              and follow us on social media platforms to be a part of the
+              WeShares journey.
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-row" <style background-color : #f4e8d9>
+    >
+    <div class="jumbotron my-3">
+      <h1 class="display-4">Welcome to QuickLoom</h1>
+      <p class="lead">
+        This is a simple hero unit, a simple jumbotron-style component for
+        calling extra attention to featured content or information.
+      </p>
+      <hr class="my-4" />
+      <p>
+        It uses utility classes for typography and spacing to space content out
+        within the larger container.
+      </p>{% if user.is_authenticated %}
+      <a class="btn btn-primary btn-lg" href="/blog/writeblog" role="button">
+        Write Blog</a>
+        {% else %}
+        <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#loginModal">
+          LOGIN TO WRITE BLOGS
+          </button>
+      
+        {% endif %}
+    </div>
 
-          <h4 style="color: whitesmoke; font-family: cursive;  opacity: 1; ">QuickLoom will be a hub for bloggers, writers, and enthusiasts to publish and share their articles, stories, and insights on a wide range of topics.</h4>
-         
+    <div class="container my-6">
+      <h2>QuickLoom Specials</h2>
+
+      {% for post in allpost %}
+      <div
+        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative"
+        style="background-color: #f4e8d9"
+      >
+        <div class="col p-4 d-flex flex-column position-static my-4">
+          <strong class="d-inline-block mb-2 text-primary"
+            >Article By {{ post.author}}</strong
+          >
+          <h3 class="mb-0">{{post.title}}</h3>
+          <div class="mb-1 text-muted">{{ post.datetime}}</div>
+          <p class="card-text mb-auto">{{ post.content| truncatechars:300}}</p>
+          <div class="my-2">
+            <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary"
+              >Continue reading</a
+            >
+          </div>
         </div>
       </div>
-      <div class="carousel-item" data-bs-interval="2000">
-        <img src="https://source.unsplash.com/random/1600x550/?Travel" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block" style="opacity: 0.6; background-color: black; border-radius: 12px;" >
-          <h4 style="color: whitesmoke; font-family: cursive;  opacity: 1; ">Emphasize educational and informative content to empower readers with valuable insights and skills.</h4>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://source.unsplash.com/random/1600x550/?wellness" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block" style="opacity: 0.6; background-color: black; border-radius: 12px;">
-          <h4 style="color: whitesmoke; font-family: cursive;  opacity: 1; ">Stay updated with our latest posts, interact with our community, and follow us on social media platforms to be a part of the WeShares journey.</h4>
-        
-        </div>
-      </div>
+
+      {% endfor %}
     </div>
-   
+
+    {% endblock body %}
   </div>
 </div>
-<div class="container-row" <style 
-  
-  background-color : #f4e8d9
->>
-  <div class="jumbotron my-3">
-    <h1 class="display-4">Welcome to QuickLoom</h1>
-    <p class="lead">
-      This is a simple hero unit, a simple jumbotron-style component for calling
-      extra attention to featured content or information.
-    </p>
-    <hr class="my-4" />
-    <p>
-      It uses utility classes for typography and spacing to space content out
-      within the larger container.
-    </p>
-    <a class="btn btn-primary btn-lg" href="/blog/writeblog" role="button"> write Blog</a>
-  </div>
-
-  
-  <div class="container my-6">
-    <h2>QuickLoom Specials</h2>
-
-    {% for post in allpost|slice:":2" %}
-    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative " style="background-color: #f4e8d9;">
-        <div class="col p-4 d-flex flex-column position-static my-4">
-            <strong class="d-inline-block mb-2 text-primary">Article By {{ post.author}}</strong>
-            <h3 class="mb-0">{{post.title}}</h3>
-            <div class="mb-1 text-muted">{{ post.datetime}}</div>
-            <p class="card-text mb-auto">{{ post.content| truncatechars:300}}</p>
-            <div class="my-2">
-            	<a href="/blog/{{post.slug}}" role="button" class="btn btn-primary">Continue reading</a>
-            </div>
-            
-        </div>
-        {% endfor %}
-        
-        </div>
-       
-          </body>
-
-{% endblock body %}

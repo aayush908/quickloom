@@ -6,7 +6,7 @@ from django.contrib.auth  import authenticate,  login, logout
 from blog.models import Post
 
 def home(request): 
-    allpost = Post.objects.all()
+    allpost = Post.objects.all().order_by('-timeStamp')[:3]
     context = {'allpost' : allpost}
     return render(request ,"home/home.html", context)
     
