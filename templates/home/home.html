@@ -111,6 +111,7 @@
     >
     <div class="jumbotron my-3">
       <h1 class="display-4">Welcome to QuickLoom</h1>
+      <marquee>HOPES ARE THE BEST FRIEND AND MOTIVATOR </marquee>
       <p class="lead">
         This is a simple hero unit, a simple jumbotron-style component for
         calling extra attention to featured content or information.
@@ -144,7 +145,7 @@
           >
           <h3 class="mb-0">{{post.title}}</h3>
           <div class="mb-1 text-muted">{{ post.datetime}}</div>
-          <p class="card-text mb-auto">{{ post.content| truncatechars:300}}</p>
+          <p class="card-text mb-auto">{{ post.content|safe| truncatechars:300}}</p>
           <div class="my-2">
             <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary"
               >Continue reading</a
