@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-82@4vdseu4f1%*y^8x=_f*xb^v98(ig&qpdn7&l7zo*4mx@ldq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['quickloom.onrender.com']
 
 
 # Application definition
