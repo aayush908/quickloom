@@ -100,14 +100,39 @@
   background: #073b4c;
   color: #fff;
 }
+#back {
+  width: 100%;
+  height: 100%;
+  background: rgb(85,31,89);
+background: linear-gradient(90deg, rgba(85,31,89,1) 0%, rgba(97,150,150,1) 53%, rgba(198,154,219,1) 93%);
+ 
+ 
+ 
+}
+
+
+#pattern {
+  width: 100%;
+  height: 100%;
+  --s: 37px; /* control the size */
+
+  --c: #0000, #282828 0.5deg 119.5deg, #0000 120deg;
+  --g1: conic-gradient(from 60deg at 56.25% calc(425% / 6), var(--c));
+  --g2: conic-gradient(from 180deg at 43.75% calc(425% / 6), var(--c));
+  --g3: conic-gradient(from -60deg at 50% calc(175% / 12), var(--c));
+  background: var(--g1), var(--g1) var(--s) calc(1.73 * var(--s)), var(--g2),
+    var(--g2) var(--s) calc(1.73 * var(--s)), var(--g3) var(--s) 0,
+    var(--g3) 0 calc(1.73 * var(--s)) #1e1e1e;
+  background-size: calc(2 * var(--s)) calc(3.46 * var(--s));
+}
 
 
     
     </style>
   </head>
-  <body>
+  <body id = "back">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="pattern">
         <a class="navbar-brand" id = "hover" href="/">QuickLoom</a> 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -118,21 +143,23 @@
             <li class="nav-item {% block homeactive %}  {% endblock homeactive %}">
               <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item {% block aboutactive %}  {% endblock aboutactive %}" >
-              <a class="nav-link"  href="/about">About</a>
-            </li>
-            <li class="nav-item {% block contactactive %}  {% endblock contactactive %} ">
-              <a class="nav-link"  href="/contact">Contact</a>
-            </li>
             <li class="nav-item {% block blogactive %}  {% endblock blogactive %} ">
               <a class="nav-link"   href="/blog">Blog</a>
             </li>
+            <li class="nav-item {% block aboutactive %}  {% endblock aboutactive %}" >
+              <a class="nav-link"  href="/about">About</a>
+            </li>
+
+            <li class="nav-item {% block contactactive %}  {% endblock contactactive %} ">
+              <a class="nav-link"  href="/contact">Contact</a>
+            </li>
+            
             
           </ul>
           <form method="get" action="/search"class="form-inline my-2 my-lg-0 mx-3">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" id="query">
             <button class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button></form>
-            <a href="/admin" role="button" target="_blank" class="btn btn-outline-success m-2 my-sm-0"> Admin Panel </a>
+            <!-- <a href="/admin" role="button" target="_blank" class="btn btn-outline-success m-2 my-sm-0"> Admin Panel </a> -->
           
 
                <!-- Button to  trigger SignUp modal -->
@@ -232,13 +259,13 @@
 
       {% block body %}  {% endblock body %}
 </main>
-<footer>
+<footer id ="pattern">
   <!-- Social Media Icons -->
   <div class="social-icons">
       <a href="https://www.linkedin.com/in/aayush-kapil-759959252" target="_blank"><img src="static\img\lin.png" alt="LinkedIn" width="70" height="70"></a>
-      <a href="#" target="_blank"><img src="static\img\github.png" alt="Github" width="90" height="100"></a>
-      <a href="#" target="_blank"><img src="static\img\port.png" alt="Portfolio" width="70" height="70"></a>
-      <a href="#" target="_blank"><img src="static\img\inst.png" alt="Instagram" width="70" height="70"></a>
+      <a href="#" target="_blank"><img src=".\static\img\github.png" alt="Github" width="90" height="100"></a>
+      <a href="#" target="_blank"><img src=".\static\img\port.png" alt="Portfolio" width="70" height="70"></a>
+      <a href="#" target="_blank"><img src=".\static\img\inst.png" alt="Instagram" width="70" height="70"></a>
      
       <!-- Add more social media icons as needed -->
   </div>
