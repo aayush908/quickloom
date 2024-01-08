@@ -127,12 +127,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [BASE_DIR/"static"]
-<<<<<<< HEAD
+
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-=======
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
->>>>>>> 932ed8e550e12a9ba6a52709768d006b454dbbc7
+
+
 
 
 # Default primary key field type
