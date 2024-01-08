@@ -3,7 +3,7 @@
 {% block title %} contact {% endblock title %}
 {% block aboutactive %} active {% endblock aboutactive %}
 {% block body %} 
-{% load static %}
+
 
 <!-- style="background-color: #64347d;" -->
 
@@ -15,7 +15,7 @@
   <div id="carouselExample" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="static\img\aboutbg.jpg" class="d-block w-100" alt="Creative Idea 1">
+        <img src="{% static 'img\aboutbg.jpg' %}" class="d-block w-100" alt="Creative Idea 1">
         <div class="carousel-caption d-none d-md-block">
           <h5>Creative Idea 1</h5>
           <p> </p>
@@ -45,7 +45,7 @@
   <div class="container">
     <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
       <div class="col-12 col-lg-6 col-xl-5">
-        <img class=""  src="{% static 'img\quicklloom.png '%}" alt="About 1" width="300" height="300" >
+        <img class=""  src="{%static 'img\quicklloom.png' %}" alt="About 1" width="300" height="300" >
       </div>
       <div class="col-12 col-lg-6 col-xl-7">
         <div class="row justify-content-xl-center">
