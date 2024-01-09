@@ -53,9 +53,9 @@ def handleSignUp(request):
         pass2 = request.POST["pass2"]
 
         # check for errorneous input
-        if len(username) < 10:
-            messages.error(request, " Your user name must be under 10 characters")
-            return redirect("home")
+        # if len(username) > 10:
+        #     messages.error(request, " Your user name must be under 10 characters")
+        #     return redirect("home")
 
         if not username.isalnum():
             messages.error(
@@ -71,7 +71,7 @@ def handleSignUp(request):
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
-        messages.success(request, " Your iCoder has been successfully created")
+        messages.success(request,  f"Hello , {myuser.first_name} Welcome to the Quickloom ..")
         return redirect("home")
 
     else:
