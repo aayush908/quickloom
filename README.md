@@ -2,6 +2,8 @@
 
 => "Developed Django-based Blogging website named Quickloom for seamless content creation and interaction."
 
+HOSTED LINK : https://quickloom.onrender.com/
+
 1 - Implemented robust Authentication system for user login and signup functionalities.
 
 
